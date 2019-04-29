@@ -70,7 +70,7 @@ def loop_list(list1,num_all,profits):
                      res[len(tradestring_vm)]+=1
                  long_rt=len(tradestring_vm);
                  if  len(tradestring_vm)==8 :
-                     print json_fs[fs]
+                 #    print json_fs[fs]
                  #对tradestring 对应的单词进行循环排序
                  for num in range(0,len(tradestring_vm)):
                      tradestring_vm_cp=tradestring_vm[0];
