@@ -1,0 +1,51 @@
+#coding=utf-8
+import chardet
+import sys
+import requests
+import json
+import importlib
+import requests, re, sys
+import imp
+import io
+imp.reload(sys)
+#importlib.reload(sys)
+#sys.setdefaultencoding('utf-8')
+#sys.setdefaultencoding('utf-8')
+def requests_name(url):
+    r = requests.get(url)
+#    print (r.text)
+#def json_chuli(r.text)
+    json_str = json.dumps(r.text)
+#    print (json_str)
+    params_json = json.loads(r.text)
+
+    items = params_json.items()
+    for key, value in items:
+        
+#        print ( str(type(value))=='str')
+        if (type(value))==list:
+#            print ('true')
+            for value1 in  value :
+               # print (value1['name'])
+                #print (type(value1))
+                if value1['name']=='Ethereum':
+                   # print (1)
+                    print(value1)
+                    print (value1['rate'])
+#                print(value1.decode('utf-8'))   
+#                print (12)           
+#                print (chardet.detect(value1))     
+#    print(items['result'])
+url_pairs='https://data.gateio.co/api2/1/pairs'
+url_marketinfo='https://data.gateio.co/api2/1/marketinfo'
+url_tickers='https://data.gateio.co/api2/1/tickers'
+url_eth_btc='https://data.gateio.co/api2/1/ticker/eth_btc'
+url_marketlist='https://data.gateio.co/api2/1/marketlist'
+#requests_name(url_tickers)
+#requests_name(url_eth_btc)
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+c='hah	哈哈'
+print (c)
+print (str(sys.argv))
+sys.stdout.encoding
+requests_name(url_marketlist)
