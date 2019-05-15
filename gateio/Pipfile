@@ -6,8 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-redis = "*"
-django-crontab = "*"
+django = "==2.1.7"
+pymysql = "*"
 
 [requires]
 python_version = "3.6"
